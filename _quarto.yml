@@ -3,8 +3,8 @@ project:
 
 website:
   title: "Final Project"
-  background: blue
   navbar:
+    background: blue
     left:
       - href: about.qmd
         text: About

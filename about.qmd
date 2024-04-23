@@ -22,8 +22,8 @@ Let's take a look
 
 **Adelie Penguin**
 
-```{r echo=FALSE, out.width = "30%", fig.align = "center"}
-knitr::include_graphics("C:\\Users\\C25Cort.Ballinger\\OneDrive - afacademy.af.edu\\Pictures\\adele.jpg")
+```{r echo=FALSE, out.width = "50%", fig.align = "center"}
+knitr::include_graphics("C:\\Users\\C25Cort.Ballinger\\OneDrive - afacademy.af.edu\\Desktop\\Final Project\\images\\adelie.jpg")
 
 
 ```
@@ -31,12 +31,12 @@ knitr::include_graphics("C:\\Users\\C25Cort.Ballinger\\OneDrive - afacademy.af.e
 **Chinstrap Penguin**
 
 ```{r echo=FALSE, out.width = "30%", fig.align = "center"}
-knitr::include_graphics("C:\\Users\\C25Cort.Ballinger\\OneDrive - afacademy.af.edu\\Pictures\\chinstrap.jpg")
+knitr::include_graphics("C:\\Users\\C25Cort.Ballinger\\OneDrive - afacademy.af.edu\\Desktop\\Final Project\\images\\chinstrap.jpg")
 
 ```
 
 **Gentoo Penguin**
 
 ```{r echo=FALSE, out.width = "30%", fig.align = "center"}
-knitr::include_graphics("C:\\Users\\C25Cort.Ballinger\\OneDrive - afacademy.af.edu\\Pictures\\gentoo.jpg")
+knitr::include_graphics("C:\\Users\\C25Cort.Ballinger\\OneDrive - afacademy.af.edu\\Desktop\\Final Project\\images\\gentoo.jpg")
 ```

@@ -10,7 +10,7 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ----------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing palmerpenguins ...                 "
 "1","OK [linked from cache]
@@ -39,12 +39,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ----------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing dplyr ...                          "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 23 milliseconds.
+"1","Successfully installed 1 package in 19 milliseconds.
 "
 "0","install.packages(""ggplot2"")"
 "1","The following package(s) will be installed:
@@ -58,12 +58,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ----------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing ggplot2 ...                        "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 40 milliseconds.
+"1","Successfully installed 1 package in 18 milliseconds.
 "
 "0","library(palmerpenguins)"
 "0","library(dplyr)"

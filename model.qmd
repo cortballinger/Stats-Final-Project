@@ -6,7 +6,7 @@ format:
     code-fold: true
 ---
 
-``` {python}
+```{python}
 from palmerpenguins import penguins
 from pandas import get_dummies
 import numpy as np
@@ -16,7 +16,7 @@ from sklearn import preprocessing
 
 ## Get Data
 
-``` {python}
+```{python}
 df = penguins.load_penguins().dropna()
 
 df.head(3)
@@ -24,7 +24,7 @@ df.head(3)
 
 ## Define Model and Fit
 
-``` {python}
+```{python}
 X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)
 y = df['body_mass_g']
 
@@ -33,7 +33,7 @@ model = LinearRegression().fit(X, y)
 
 ## Get some information
 
-``` {python}
+```{python}
 print(f"R^2 {model.score(X,y)}")
 print(f"Intercept {model.intercept_}")
 print(f"Columns {X.columns}")
@@ -41,29 +41,27 @@ print(f"Coefficients {model.coef_}")
 ```
 
 ```{python}
-from joblib import dump
+#from joblib import dump
 # Import the vetiver package
-import vetiver
-from vetiver import VetiverModel, vetiver_pin_write
-from pins import board_folder
+#import vetiver
+#from vetiver import VetiverModel, vetiver_pin_write
+#from pins import board_folder
 
 # Assuming 'model' and 'X' are defined earlier in your code
 
 # Save your model locally with joblib
-dump(model, 'model.pkl')
+#dump(model, 'model.pkl')
 
 # Initialize a VetiverModel object
-v = VetiverModel(model=model, model_name='penguin_model', prototype_data=X)
+#v = VetiverModel(model=model, model_name='penguin_model', prototype_data=X)
 
 # Setup a local board for vetiver pins
-model_board = board_folder("Final Project/data/model", allow_pickle_read=True)
+#model_board = board_folder("Final Project/data/model", allow_pickle_read=True)
 
 # Write your model to the pin board
-vetiver_pin_write(model_board, v, 'penguin_model_pin')
+#vetiver_pin_write(model_board, v, 'penguin_model_pin')
 
 # Prepare a Docker container for deployment
-vetiver.prepare_docker(model_board, "penguin_model")
+#vetiver.prepare_docker(model_board, "penguin_model")
 
 ```
-
-

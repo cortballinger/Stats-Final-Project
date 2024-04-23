@@ -8,7 +8,7 @@ format:
 
 ## Penguin Size and Mass by Sex and Species
 
-``` {r}
+```{r}
 install.packages("palmerpenguins")
 install.packages("dplyr")
 install.packages("ggplot2")
@@ -19,7 +19,7 @@ library(ggplot2)
 df <- palmerpenguins::penguins
 ```
 
-``` {r}
+```{r}
 df %>%
   group_by(species, sex) %>%
   summarise(
@@ -34,7 +34,7 @@ df %>%
 
 ## Penguin Size vs Mass by Species
 
-``` {r}
+```{r}
 df %>%
   ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
   geom_point() + 
@@ -42,6 +42,7 @@ df %>%
 ```
 
 ## Step 1 Proj 3
+
 ```{r}
 install.packages("DBI")
 install.packages("duckdb")
@@ -50,6 +51,7 @@ library(DBI)
 library(duckdb)
 library(dbplyr)
 ```
+
 ```{r}
 con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "my-db.duckdb")
 
@@ -77,4 +79,3 @@ df %>%
 ```{r}
 DBI::dbDisconnect(con, shutdown = TRUE)
 ```
-

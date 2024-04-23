@@ -8,5 +8,4 @@
 "0","    ) %>%"
 "0","  dplyr::collect() %>%"
 "0","  knitr::kable()"
-"2","[1m[22m`summarise()` has grouped output by [34m""species""[39m. You can override using the
-`.groups` argument."
+"2","[1m[22m`summarise()` has grouped output by [34m""species""[39m. You can override using the `.groups` argument."

@@ -8,16 +8,26 @@ format:
 
 ## Penguin Size and Mass by Sex and Species
 
-```{r}
-install.packages("palmerpenguins")
-install.packages("dplyr")
-install.packages("ggplot2")
+Here is the code to download the necessary packages in R:
+
+```{r message=FALSE}
+packages <- c("palmerpenguins", "dplyr", "ggplot2", "tidyverse", "tidymodels", "ISLR2","rpart.plot", "vip", "xgboost", "randomForest")
+suppressMessages(sapply(packages, install.packages))
 library(palmerpenguins)
 library(dplyr)
 library(ggplot2)
+library(tidyverse) 
+library(tidymodels) 
+library(ISLR2) 
+library(rpart.plot) 
+library(vip) 
+library(xgboost) 
+library(randomForest)
 
 df <- palmerpenguins::penguins
 ```
+
+Here is our data:
 
 ```{r}
 df %>%
@@ -34,21 +44,61 @@ df %>%
 
 ## Penguin Size vs Mass by Species
 
+Here we are graphing the relationship between bill length, flipper length, and bill depth, and how they relate to body mass:
+
 ```{r}
 df %>%
   ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
   geom_point() + 
   geom_smooth(method = "lm")
 ```
+```{r}
+df_clean %>%
+  ggplot(aes(x = bill_depth_mm, y = body_mass_g, color = species)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+```{r}
+df %>%
+  ggplot(aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
 
-## Step 1 Proj 3
+## Random Forresting
+```{r, message=FALSE, warning=FALSE} 
+#Random Forest For sex
+tree_spec <- decision_tree() %>%
+  set_engine("rpart")
+class_tree_spec <- decision_tree() %>%         
+  set_engine("rpart") %>%         
+  set_mode("classification")
+
+class_tree_fit <- class_tree_spec %>%
+  fit(sex ~ ., data = penguins)    
+
+class_tree_fit %>%
+  extract_fit_engine() %>%
+  rpart.plot()
+
+augment(class_tree_fit, new_data = penguins) %>%   
+  accuracy(truth = sex, estimate =.pred_class)
+
+augment(class_tree_fit, new_data = penguins) %>%  
+  conf_mat(truth = sex, estimate =.pred_class)
+```
+
+## This is for the API which would not push to github
+
+Putting the data into Duck DB:
 
 ```{r}
-install.packages("DBI")
-install.packages("duckdb")
+packages <- c("DBI", "duckdb")
+suppressMessages(sapply(packages, install.packages))
 library(DBI)
 library(duckdb)
 ```
+
 
 ```{r}
 con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "my-db.duckdb")
@@ -74,6 +124,12 @@ df %>%
   knitr::kable()
 ```
 
+
+
 ```{r}
 DBI::dbDisconnect(con, shutdown = TRUE)
 ```
+
+
+
+

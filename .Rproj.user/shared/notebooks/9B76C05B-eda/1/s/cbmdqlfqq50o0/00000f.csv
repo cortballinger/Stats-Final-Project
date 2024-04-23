@@ -1,4 +1,0 @@
-"0","con <- DBI::dbConnect(duckdb::duckdb(), dbdir = ""my-db.duckdb"")"
-"0",""
-"0","DBI::dbWriteTable(con, ""penguins"", palmerpenguins::penguins, overwrite = TRUE)"
-"0",""

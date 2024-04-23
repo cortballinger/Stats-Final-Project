@@ -1,4 +1,0 @@
-"0","df <- dplyr::tbl(con, ""penguins"")"
-"2","Warning:"
-"2"," Connection is garbage-collected, use dbDisconnect() to avoid this.
-"

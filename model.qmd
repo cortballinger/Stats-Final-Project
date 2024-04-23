@@ -6,6 +6,8 @@ format:
     code-fold: true
 ---
 
+Here is the necessary packages we need in Python:
+
 ```{python}
 from palmerpenguins import penguins
 from pandas import get_dummies
@@ -24,6 +26,8 @@ df.head(3)
 
 ## Define Model and Fit
 
+Below is the code for fitting the linear regression.
+
 ```{python}
 X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)
 y = df['body_mass_g']
@@ -32,6 +36,8 @@ model = LinearRegression().fit(X, y)
 ```
 
 ## Get some information
+
+Attached is the code and results to find R\^2, Intercept, Variables studied, and Coefficients for these variables.
 
 ```{python}
 print(f"R^2 {model.score(X,y)}")

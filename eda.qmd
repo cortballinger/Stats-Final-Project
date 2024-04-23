@@ -11,8 +11,8 @@ format:
 Here is the code to download the necessary packages in R:
 
 ```{r message=FALSE, warning=FALSE}
-packages <- c("palmerpenguins", "dplyr", "ggplot2", "tidyverse", "tidymodels", "ISLR2","rpart.plot", "vip", "xgboost", "randomForest")
-suppressMessages(sapply(packages, install.packages))
+#packages <- c("palmerpenguins", "dplyr", "ggplot2", "tidyverse", "tidymodels", "ISLR2","rpart.plot", "vip", "xgboost", "randomForest")
+#suppressMessages(sapply(packages, install.packages))
 library(palmerpenguins)
 library(dplyr)
 library(ggplot2)
@@ -96,8 +96,8 @@ augment(class_tree_fit, new_data = penguins) %>%
 Putting the data into Duck DB:
 
 ```{r message=FALSE, warning=FALSE}
-packages <- c("DBI", "duckdb")
-suppressMessages(sapply(packages, install.packages))
+#packages <- c("DBI", "duckdb")
+#suppressMessages(sapply(packages, install.packages))
 library(DBI)
 library(duckdb)
 ```

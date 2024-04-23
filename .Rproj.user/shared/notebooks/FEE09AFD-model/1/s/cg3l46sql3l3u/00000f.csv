@@ -1,4 +1,3 @@
-"0","reticulate::repl_python()"
 "0","from palmerpenguins import penguins"
 "0","from pandas import get_dummies"
 "0","import numpy as np"

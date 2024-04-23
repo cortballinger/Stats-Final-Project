@@ -11,12 +11,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ---------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing palmerpenguins ...                 "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 58 milliseconds.
+"1","Successfully installed 1 package in 25 milliseconds.
 "
 "1","The following package(s) will be installed:
 "
@@ -29,12 +29,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ---------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing dplyr ...                          "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 58 milliseconds.
+"1","Successfully installed 1 package in 25 milliseconds.
 "
 "1","The following package(s) will be installed:
 "
@@ -47,12 +47,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ---------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing ggplot2 ...                        "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 53 milliseconds.
+"1","Successfully installed 1 package in 24 milliseconds.
 "
 "1","The following package(s) will be installed:
 "
@@ -65,12 +65,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ---------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing tidyverse ...                      "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 66 milliseconds.
+"1","Successfully installed 1 package in 40 milliseconds.
 "
 "1","The following package(s) will be installed:
 "
@@ -83,12 +83,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ---------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing tidymodels ...                     "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 64 milliseconds.
+"1","Successfully installed 1 package in 26 milliseconds.
 "
 "1","The following package(s) will be installed:
 "
@@ -101,12 +101,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ---------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing ISLR2 ...                          "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 64 milliseconds.
+"1","Successfully installed 1 package in 28 milliseconds.
 "
 "1","The following package(s) will be installed:
 "
@@ -119,12 +119,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ---------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing rpart.plot ...                     "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 54 milliseconds.
+"1","Successfully installed 1 package in 29 milliseconds.
 "
 "1","The following package(s) will be installed:
 "
@@ -137,12 +137,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ---------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing vip ...                            "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 64 milliseconds.
+"1","Successfully installed 1 package in 65 milliseconds.
 "
 "1","The following package(s) will be installed:
 "
@@ -155,12 +155,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ---------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing xgboost ...                        "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 95 milliseconds.
+"1","Successfully installed 1 package in 31 milliseconds.
 "
 "1","The following package(s) will be installed:
 "
@@ -173,12 +173,12 @@
 "0","y"
 "1","
 "
-"1","# Installing packages ---------------------------------------------------
+"1","# Installing packages --------------------------------------------------------
 "
 "1","- Installing randomForest ...                   "
 "1","OK [linked from cache]
 "
-"1","Successfully installed 1 package in 57 milliseconds.
+"1","Successfully installed 1 package in 39 milliseconds.
 "
 "1","$palmerpenguins.palmerpenguins
 "

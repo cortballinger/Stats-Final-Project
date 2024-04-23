@@ -8,7 +8,7 @@ format:
 
 Here is the necessary packages we need in Python:
 
-```{python}
+```{python message=FALSE, warning=FALSE}
 from palmerpenguins import penguins
 from pandas import get_dummies
 import numpy as np

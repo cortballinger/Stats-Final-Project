@@ -10,7 +10,7 @@ format:
 
 Here is the code to download the necessary packages in R:
 
-```{r message=FALSE}
+```{r message=FALSE, warning=FALSE}
 packages <- c("palmerpenguins", "dplyr", "ggplot2", "tidyverse", "tidymodels", "ISLR2","rpart.plot", "vip", "xgboost", "randomForest")
 suppressMessages(sapply(packages, install.packages))
 library(palmerpenguins)
@@ -29,7 +29,7 @@ df <- palmerpenguins::penguins
 
 Here is our data:
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 df %>%
   group_by(species, sex) %>%
   summarise(
@@ -46,19 +46,21 @@ df %>%
 
 Here we are graphing the relationship between bill length, flipper length, and bill depth, and how they relate to body mass:
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 df %>%
   ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
   geom_point() + 
   geom_smooth(method = "lm")
 ```
-```{r}
+
+```{r message=FALSE, warning=FALSE}
 df %>%
   ggplot(aes(x = bill_depth_mm, y = body_mass_g, color = species)) +
   geom_point() +
   geom_smooth(method = "lm")
 ```
-```{r}
+
+```{r message=FALSE, warning=FALSE}
 df %>%
   ggplot(aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
   geom_point() + 
@@ -66,7 +68,8 @@ df %>%
 ```
 
 ## Random Forresting
-```{r, message=FALSE, warning=FALSE} 
+
+```{r, message=FALSE, warning=FALSE}
 #Random Forest For sex
 tree_spec <- decision_tree() %>%
   set_engine("rpart")
@@ -92,26 +95,25 @@ augment(class_tree_fit, new_data = penguins) %>%
 
 Putting the data into Duck DB:
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 packages <- c("DBI", "duckdb")
 suppressMessages(sapply(packages, install.packages))
 library(DBI)
 library(duckdb)
 ```
 
-
-```{r}
+```{r message=FALSE, warning=FALSE}
 con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "my-db.duckdb")
 
 DBI::dbWriteTable(con, "penguins", palmerpenguins::penguins, overwrite = TRUE)
 
 ```
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 df <- dplyr::tbl(con, "penguins")
 ```
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 df %>%
   group_by(species, sex) %>%
   summarise(
@@ -124,12 +126,6 @@ df %>%
   knitr::kable()
 ```
 
-
-
-```{r}
+```{r message=FALSE, warning=FALSE}
 DBI::dbDisconnect(con, shutdown = TRUE)
 ```
-
-
-
-

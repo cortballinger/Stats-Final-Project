@@ -1,0 +1,86 @@
+"0","install.packages(""palmerpenguins"")"
+"1","The following package(s) will be installed:
+"
+"1","- palmerpenguins [0.1.1]
+"
+"1","These packages will be installed into ""C:/Users/C25Cort.Ballinger/OneDrive - afacademy.af.edu/Desktop/Final Project/renv/library/R-4.3/x86_64-w64-mingw32"".
+"
+"1","
+"
+"0","y"
+"1","
+"
+"1","# Installing packages ----------------------------------------------------
+"
+"1","- Installing palmerpenguins ...                 "
+"1","OK [linked from cache]
+"
+"1","Successfully installed 1 package in 23 milliseconds.
+"
+"2","Warning messages:
+"
+"2","1: Not a validObject(): no slot of name ""bigint"" for this object of class ""duckdb_connection"" 
+"
+"2","2: Not a validObject(): no slot of name ""config"" for this object of class ""duckdb_driver"" 
+"
+"2","3: Not a validObject(): no slot of name ""bigint"" for this object of class ""duckdb_connection"" 
+"
+"2","4: Not a validObject(): no slot of name ""config"" for this object of class ""duckdb_driver"" 
+"
+"0","install.packages(""dplyr"")"
+"1","The following package(s) will be installed:
+"
+"1","- dplyr [1.1.4]
+"
+"1","These packages will be installed into ""C:/Users/C25Cort.Ballinger/OneDrive - afacademy.af.edu/Desktop/Final Project/renv/library/R-4.3/x86_64-w64-mingw32"".
+"
+"1","
+"
+"0","y"
+"1","
+"
+"1","# Installing packages ----------------------------------------------------
+"
+"1","- Installing dplyr ...                          "
+"1","OK [linked from cache]
+"
+"1","Successfully installed 1 package in 23 milliseconds.
+"
+"0","install.packages(""ggplot2"")"
+"1","The following package(s) will be installed:
+"
+"1","- ggplot2 [3.5.0]
+"
+"1","These packages will be installed into ""C:/Users/C25Cort.Ballinger/OneDrive - afacademy.af.edu/Desktop/Final Project/renv/library/R-4.3/x86_64-w64-mingw32"".
+"
+"1","
+"
+"0","y"
+"1","
+"
+"1","# Installing packages ----------------------------------------------------
+"
+"1","- Installing ggplot2 ...                        "
+"1","OK [linked from cache]
+"
+"1","Successfully installed 1 package in 40 milliseconds.
+"
+"0","library(palmerpenguins)"
+"0","library(dplyr)"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(ggplot2)"
+"0",""
+"0","df <- palmerpenguins::penguins"

@@ -1,0 +1,7 @@
+[1,"=> shiny::runApp()\n\n"]
+[1,"- The project is out-of-sync -- use `renv::status()` for details.\r\n"]
+[2,"Loading required package: shiny\r\n"]
+[2,"\r\nListening on http://127.0.0.1:7377\r\n"]
+[2,"Error during API request: HTTP 422 Unprocessable Entity.\r\n"]
+[2,"Error during API request: HTTP 422 Unprocessable Entity.\r\n"]
+[2,"Error during API request: HTTP 422 Unprocessable Entity.\r\n"]

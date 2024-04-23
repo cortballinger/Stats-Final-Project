@@ -1,0 +1,12 @@
+"0","df %>%"
+"0","  group_by(species, sex) %>%"
+"0","  summarise("
+"0","    across("
+"0","        ends_with(""mm"") | ends_with(""g""),"
+"0","      \(x) mean(x, na.rm = TRUE)"
+"0","      )"
+"0","    ) %>%"
+"0","  dplyr::collect() %>%"
+"0","  knitr::kable()"
+"2","[1m[22m`summarise()` has grouped output by [34m""species""[39m. You can override using the
+`.groups` argument."

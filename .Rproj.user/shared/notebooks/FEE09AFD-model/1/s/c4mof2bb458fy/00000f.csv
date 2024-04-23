@@ -1,0 +1,41 @@
+"0","from joblib import dump"
+"0","# Import the vetiver package"
+"0","import vetiver"
+"0","from vetiver import VetiverModel, vetiver_pin_write"
+"0","from pins import board_folder"
+"0",""
+"0","# Assuming 'model' and 'X' are defined earlier in your code"
+"0",""
+"0","# Save your model locally with joblib"
+"0","dump(model, 'model.pkl')"
+"1","['model.pkl']
+"
+"0","# Initialize a VetiverModel object"
+"0","v = VetiverModel(model=model, model_name='penguin_model', prototype_data=X)"
+"0",""
+"0","# Setup a local board for vetiver pins"
+"0","model_board = board_folder(""Final Project/data/model"", allow_pickle_read=True)"
+"0",""
+"0","# Write your model to the pin board"
+"0","vetiver_pin_write(model_board, v, 'penguin_model_pin')"
+"2","Model Cards provide a framework for transparent, responsible reporting. 
+ Use the vetiver `.qmd` Quarto template as a place to start, 
+ with vetiver.model_card()"
+"2","
+"
+"2","Writing pin:
+Name: 'penguin_model'
+Version: 20240422T110644Z-a6f9b"
+"2","
+"
+"0","# Prepare a Docker container for deployment"
+"0","vetiver.prepare_docker(model_board, ""penguin_model"")"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+  File ""[90m]8;line = 150;file://C:\Users\C25Cort.Ballinger\AppData\Local\Programs\Python\Python312\Lib\site-packages\vetiver\write_docker.pyC:\Users\C25COR~1.BAL\AppData\Local\Programs\Python\PYTHON~1\Lib\site-packages\vetiver\write_docker.py]8;;[39m"", line 150, in prepare_docker
+    write_app(
+  File ""[90m]8;line = 104;file://C:\Users\C25Cort.Ballinger\AppData\Local\Programs\Python\Python312\Lib\site-packages\vetiver\write_fastapi.pyC:\Users\C25COR~1.BAL\AppData\Local\Programs\Python\PYTHON~1\Lib\site-packages\vetiver\write_fastapi.py]8;;[39m"", line 104, in write_app
+    f = open(file, ""x"")
+        ^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: 'app.py'
+"

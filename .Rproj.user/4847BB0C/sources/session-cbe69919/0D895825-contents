@@ -1,0 +1,81 @@
+---
+title: "Penguins EDA"
+author: "Cort Ballinger"
+format:
+  html:
+    code-fold: true
+---
+
+## Penguin Size and Mass by Sex and Species
+
+```{r}
+install.packages("palmerpenguins")
+install.packages("dplyr")
+install.packages("ggplot2")
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+
+df <- palmerpenguins::penguins
+```
+
+```{r}
+df %>%
+  group_by(species, sex) %>%
+  summarise(
+    across(
+      where(is.numeric), 
+      \(x) mean(x, na.rm = TRUE)
+      ),
+    .groups = "drop"
+    ) %>%
+  knitr::kable()
+```
+
+## Penguin Size vs Mass by Species
+
+```{r}
+df %>%
+  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+
+## Step 1 Proj 3
+
+```{r}
+install.packages("DBI")
+install.packages("duckdb")
+install.packages("dbplyr")
+library(DBI)
+library(duckdb)
+library(dbplyr)
+```
+
+```{r}
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "my-db.duckdb")
+
+DBI::dbWriteTable(con, "penguins", palmerpenguins::penguins, overwrite = TRUE)
+
+```
+
+```{r}
+df <- dplyr::tbl(con, "penguins")
+```
+
+```{r}
+df %>%
+  group_by(species, sex) %>%
+  summarise(
+    across(
+        ends_with("mm") | ends_with("g"),
+      \(x) mean(x, na.rm = TRUE)
+      )
+    ) %>%
+  dplyr::collect() %>%
+  knitr::kable()
+```
+
+```{r}
+DBI::dbDisconnect(con, shutdown = TRUE)
+```

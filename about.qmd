@@ -1,9 +1,44 @@
 ---
 title: "About"
+author: "Cort Ballinger"
 ---
 
 About this site
 
-```{r}
-1 + 1
+### **Exploring the Palmer Penguins Dataset: A Data Analysis and Modeling Website**
+
+Welcome to our comprehensive data analysis and modeling platform focused on the Palmer Penguins dataset. Our website is designed to help you explore the intriguing relationship between penguin bill length and mass, providing insights through exploratory data analysis and advanced machine learning models.
+
+#### **Features:**
+
+**1. Exploratory Data Analysis:**\
+Dive into the Palmer Penguins dataset and explore the key characteristics of these unique birds. We offer interactive visualizations and detailed statistical summaries that help you understand the distributions, correlations, and patterns within the data.
+
+**2. Examine Models and Graphs:**\
+We aim to provide a comprehensive and intuitive way to explore the Palmer Penguins data-set. Whether you're interested in uncovering patterns, identifying relationships, or building predictive models, our platform's visual tools will guide you through each step of the process.
+
+**3. Shiny App Visualization:**\
+Experience our interactive Shiny app, where you can visualize model predictions in real time. Adjust input parameters to see how they affect the outcomes, allowing you to explore various scenarios and gain deeper insights into the model's behavior.
+
+Let's take a look
+
+**Adelie Penguin**
+
+```{r echo=FALSE, out.width = "30%", fig.align = "center"}
+knitr::include_graphics("C:\\Users\\C25Cort.Ballinger\\OneDrive - afacademy.af.edu\\Pictures\\adele.jpg")
+
+
+```
+
+**Chinstrap Penguin**
+
+```{r echo=FALSE, out.width = "30%", fig.align = "center"}
+knitr::include_graphics("C:\\Users\\C25Cort.Ballinger\\OneDrive - afacademy.af.edu\\Pictures\\chinstrap.jpg")
+
+```
+
+**Gentoo Penguin**
+
+```{r echo=FALSE, out.width = "30%", fig.align = "center"}
+knitr::include_graphics("C:\\Users\\C25Cort.Ballinger\\OneDrive - afacademy.af.edu\\Pictures\\gentoo.jpg")
 ```

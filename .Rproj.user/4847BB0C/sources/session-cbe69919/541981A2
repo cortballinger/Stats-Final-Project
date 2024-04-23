@@ -3,7 +3,7 @@
     "path": "C:/Users/C25Cort.Ballinger/OneDrive - afacademy.af.edu/Desktop/Final Project/about.qmd",
     "project_path": "about.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "3884491018",
     "contents": "",
     "dirty": false,
     "created": 1713843114840.0,
@@ -16,14 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "2:0"
+        "rmdVisualModeLocation": "1897:2339.333251953125",
+        "cursorPosition": "41,0",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1709927181,
+    "lastKnownWriteTime": 1713848664,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1709927181,
+    "last_content_update": 1713848664993,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -2,9 +2,9 @@
 "1","R^2 0.8555368759537614
 "
 "0","print(f""Intercept {model.intercept_}"")"
-"0","print(f""Columns {X.columns}"")"
 "1","Intercept 2169.269720939398
 "
+"0","print(f""Columns {X.columns}"")"
 "1","Columns Index(['bill_length_mm', 'species_Chinstrap', 'species_Gentoo', 'sex_male'], dtype='object')
 "
 "0","print(f""Coefficients {model.coef_}"")"

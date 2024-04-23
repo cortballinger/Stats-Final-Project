@@ -46,10 +46,8 @@ df %>%
 ```{r}
 install.packages("DBI")
 install.packages("duckdb")
-install.packages("dbplyr")
 library(DBI)
 library(duckdb)
-library(dbplyr)
 ```
 
 ```{r}

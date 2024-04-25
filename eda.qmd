@@ -138,6 +138,29 @@ augment(class_tree_fit, new_data = penguins) %>%
   conf_mat(truth = sex, estimate =.pred_class)
 ```
 
+```{r, message=FALSE, warning=FALSE}
+#Random Forest For species
+tree_spec <- decision_tree() %>%
+  set_engine("rpart")
+class_tree_spec <- decision_tree() %>%         
+  set_engine("rpart") %>%         
+  set_mode("classification")
+
+class_tree_fit <- class_tree_spec %>%
+  fit(species ~ ., data = penguins)    
+
+class_tree_fit %>%
+  extract_fit_engine() %>%
+  rpart.plot()
+
+augment(class_tree_fit, new_data = penguins) %>%   
+  accuracy(truth = species, estimate =.pred_class)
+
+augment(class_tree_fit, new_data = penguins) %>%  
+  conf_mat(truth = species, estimate =.pred_class)
+
+```
+
 ## This is for the API which would not push to github
 
 Putting the data into Duck DB:

@@ -42,9 +42,11 @@ df %>%
   knitr::kable()
 ```
 
-## Penguin Size vs Mass by Species
+## Penguin features by Species and Sex
 
-Here we are graphing the relationship between bill length, flipper length, and bill depth, and how they relate to body mass:
+Here we are graphing many different relationships so you can visualize some of the profound similarities and differences for each species, and within the sex of each species:
+
+Species plots:
 
 ```{r message=FALSE, warning=FALSE}
 df %>%
@@ -67,7 +69,52 @@ df %>%
   geom_smooth(method = "lm")
 ```
 
-## Random Forresting
+Species separated into sex with body mass vs. bill length:\
+
+```{r message=FALSE, warning=FALSE}
+adelie_data_filtered <- subset(df, species == "Adelie" & !is.na(sex))
+
+ggplot(adelie_data_filtered, aes(x = bill_length_mm, y = body_mass_g, color = sex)) +
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  theme_minimal() +
+  labs(
+    title = "Adelie Penguin Body Mass vs. Bill Length by Gender",
+    x = "Bill Length (mm)",
+    y = "Body Mass (g)"
+  )
+
+```
+
+```{r message=FALSE, warning=FALSE}
+chinstrap_data <- subset(df, species == "Chinstrap")
+
+ggplot(chinstrap_data, aes(x = bill_length_mm, y = body_mass_g, color = sex)) +
+  geom_point() +  
+  geom_smooth(method = "lm") +
+  theme_minimal() +
+  labs(
+    title = "Chinstrap Penguin Body Mass vs. Bill Length by Gender",
+    x = "Bill Length (mm)",
+    y = "Body Mass (g)"
+  )
+```
+
+```{r message=FALSE, warning=FALSE}
+gentoo_data_filtered <- subset(df, species == "Gentoo" & !is.na(sex))
+
+ggplot(gentoo_data_filtered, aes(x = bill_length_mm, y = body_mass_g, color = sex)) +
+  geom_point() + 
+  geom_smooth(method = "lm") + 
+  theme_minimal() +
+  labs(
+    title = "Gentoo Penguin Body Mass vs. Bill Length by Gender",
+    x = "Bill Length (mm)",
+    y = "Body Mass (g)"
+  )
+```
+
+## Random Foresting
 
 ```{r, message=FALSE, warning=FALSE}
 #Random Forest For sex
